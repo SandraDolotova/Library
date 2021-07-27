@@ -6,26 +6,33 @@ import java.util.*;
 public class LibraryList {
 
     private static final String libraryBookListFile = "Library_list";
+    private static final String borrowedBooks = "Borrow_Books_list";
     // FileReader fileReader = new FileReader(libraryBookListFile);
-    // Scanner scanner = new Scanner(fileReader);
-    Map<String, String> books = new HashMap<>();
+    Scanner scanner = new Scanner(System.in);
+   // public static Map<String, String> books = new HashMap<>();
+   public static Properties properties = new Properties();
 
-    public LibraryList() throws FileNotFoundException {
+    public LibraryList() {
     }
 
-    public Map<String, String> getBooksFromList() throws IOException {
-        Properties properties = new Properties();
+    public Properties getBooksFromList() throws IOException {
         properties.load(new FileInputStream(libraryBookListFile));
 
         for (Map.Entry entry : properties.entrySet()) {
             System.out.println(entry.getKey() + " ==== " + entry.getValue());
+            System.out.println(properties.size());
             // System.out.println(entry.getKey());
             // System.out.println(entry.getValue());
         }
-        return books;
+        return properties;
     }
 
-    
+
+    public void showBorrowList() throws IOException {
+
+
+
+    }
 
 
 }
