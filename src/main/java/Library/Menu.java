@@ -8,7 +8,7 @@ public class Menu {
  BookManagement bookManagement = new BookManagement();
     Scanner scanner = new Scanner(System.in);
 
-    public Menu() throws FileNotFoundException {
+    public Menu() throws IOException {
     }
 
 

@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class Book {
 
-    private UUID id;
+    private int id;
     private String bookTitle;
     private String author;
 
@@ -12,17 +12,17 @@ public class Book {
     public Book() {
     }
 
-    public Book(UUID id, String bookTitle, String author) {
+    public Book(int id, String bookTitle, String author) {
         this.id = id;
         this.bookTitle = bookTitle;
         this.author = author;
     }
 
-    public UUID getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(int id) {
         this.id = id;
     }
 
